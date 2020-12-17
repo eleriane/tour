@@ -53,8 +53,9 @@ class PromocaoController {
             status = HttpStatus.ACCEPTED
         }
         return ResponseEntity(Unit,status)
-
     }
+
+
     @GetMapping()
     fun getAll(@RequestParam(required = false, defaultValue = "") localFilter: String): ResponseEntity<List<Promocao>> {
         var status = HttpStatus.OK
